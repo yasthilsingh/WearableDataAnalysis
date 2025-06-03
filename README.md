@@ -1,62 +1,56 @@
-# 🧠 Wearable Data Analysis Dashboard
+# 🚴‍♂️ Uncovering Training Intensity
 
-This project showcases my ability to extract insights from wearable fitness data using Python. It focuses on analyzing time-series data from personal Strava exports to uncover trends in physical activity intensity and training behavior over time.
+This project analyzes wearable fitness data to explore training intensity over time using time series methods. It showcases practical skills in **data cleaning**, **rolling window analytics**, and **Python dashboarding**.
 
-This notebook demonstrates skills in **data cleaning**, **time-series analysis**, **statistical reasoning**, and **dashboard-style visual storytelling** using Python libraries like `pandas`, `matplotlib`, and `seaborn`.
+## 🔍 Project Summary
 
----
+The goal was to derive insights from activity tracker data by analyzing patterns in speed, pace, and distance. Activities were classified (e.g., Cycling vs. Running) based on average speed thresholds and further evaluated using smoothed trend lines.
 
-## 📌 Project Highlights
-
-✔️ **Time-Series Analysis:**  
-Used rolling windows and trend plots to smooth fluctuations in heart rate and speed across sessions.
-
-✔️ **Statistical Thinking:**  
-Computed per-session average heart rate, cadence, speed, and distance to compare effort levels and session types.
-
-✔️ **Data Cleaning & Preparation:**  
-Handled non-uniform time intervals and structured the data to make it usable for multi-level groupings (e.g., by file, timestamp).
-
-✔️ **Visual Storytelling:**  
-Crafted a standalone HTML dashboard with clean layout and rich visualizations — suitable for non-technical stakeholders.
-
-✔️ **Dashboard Export:**  
-Removed all code cells and deployed a visual-only HTML report via GitHub Pages.
+> 📌 **Note**: This dataset is **not publicly available** due to privacy reasons.
 
 ---
 
-## 📊 Dashboard Preview
+## 🛠 Skills Demonstrated
 
-Since GitHub can't render the full interactive HTML, here's a static preview:
-
-![Dashboard Screenshot](images/Stats%20View.png)
-
----
-
-## 🌐 Live Dashboard
-
-👉 [View the hosted HTML dashboard on GitHub Pages](https://yasthilsingh.github.io/WearableDataAnalysis/)
+- 🧹 **Data Cleaning**: Interpolated missing values, dropped high-null columns.
+- 📈 **Time Series Analysis**: Used 7-day rolling averages to analyze training load.
+- 📊 **Statistical Thinking**: Applied threshold-based logic for activity classification.
+- 📉 **Data Visualization**: Created an interactive time series dashboard in Python.
 
 ---
 
-## 📁 Repo Structure
+## 🌐 Live Walkthrough and Visualisations
 
-WearableDataAnalysis/
-├── docs/ # GitHub Pages hosting (index.html)
-├── images/ # Static dashboard preview(s)
-├── Notebook.ipynb # Full analysis with code
-└── README.md # Project summary (this file)
+This section showcases **static visualizations** of the analysis results, rendered directly from the notebook. These plots highlight key patterns in training intensity across time.
 
----
+📄 **Hosted on GitHub Pages:**  
+👉 [View Walkthrough and Visualisations](https://yasthilsingh.github.io/WearableDataAnalysis/)
 
-## 🔒 Data Privacy Notice
-
-This project uses private fitness exports from a wearable device (Strava `.fit.gz` files). The data is **not publicly shareable**, but the methodology and structure are fully reproducible with similar time-series datasets.
+*The full notebook (with the code) can be viewed in the [`Notebook.ipynb`](Notebook.ipynb) file.*
 
 ---
 
-## 👨‍💻 About Me
+## 🖼️ Dashboard Previews
 
-I'm currently pursuing my Master's in Applied Data Science and have a background in digital analytics and economics. I'm passionate about using data to create actionable health insights and polished, communicative dashboards.
+**📊 Stats View**  
+![Stats View](images/Stats%20View.png)
 
-Feel free to explore more of my work at [github.com/yasthilsingh](https://github.com/yasthilsingh).
+**📈 Time Series View**  
+![Timeseries View](images/Timeseries%20View.png)
+
+
+## 🔍 Insights & Recommendations
+
+### Key Insights
+
+- **Activity Differentiation**: Average speed clearly distinguishes between Running and Cycling, validating its use as a classification metric.
+- **Training Intensity**: Most sessions reflect moderate-intensity training, with occasional spikes into high heart rate zones—indicating a well-balanced routine.
+- **Cadence Stability**: Cadence remains consistent across sessions, although biomechanical differences between activities are evident.
+- **Heart Rate Trends**: 7-day rolling averages of heart rate uncover cyclical periods of peak training and recovery.
+- **Data Clusters**: Scatter plots reveal meaningful patterns between cadence, speed, and heart rate that differ across activity types.
+
+### Recommendations
+
+- 💡 Consider increasing session variety if training goals include performance gains—e.g., add more high-intensity intervals if currently dominated by moderate intensity.
+- 📅 Use rolling heart rate trends to identify overtraining or undertraining periods and adjust the training load accordingly.
+- 🔍 Further exploration could include segmenting workouts by duration or terrain to enhance insights.
